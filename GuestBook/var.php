@@ -12,10 +12,19 @@ include "add.php";
 
 <body>
 
+    <form action="?" method="post">
+        <h1>Введите Ваше имя</h1>
+        <input type="text" name="name">
+        <h1>E-mail</h1>
+        <input type="text" name="email">
+        <h1>Ваш комментарий</h1>
+        <input type="text" name="text"><br>
+        <input type="submit" value="ok">
 
+    </form>
     <?php
     $data = file_get_contents("var.txt");
-    print_r($data);
+    // print_r($data);
     $records = explode("<----->", $data);
     // print_r($records);
     echo "<table border='1'width='520px'>";
@@ -29,13 +38,7 @@ include "add.php";
     }
     echo "</table>";
     ?>
-    <form action="?" method="post">
-        <input type="text" name="name">
-        <input type="text" name="email">
-        <input type="text" name="text">
-        <input type="submit" value="ok">
 
-    </form>
 </body>
 
 </html>
